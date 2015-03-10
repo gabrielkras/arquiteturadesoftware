@@ -1,21 +1,18 @@
-package Tabuleiro;
+package tabuleiro;
 
 import javax.swing.ImageIcon;
 
 public enum Elementos {
-	GRAMA, AGUA, MACA, PERSONAGEM;
-
-	private ImageIcon icone;
-
-	public Elementos() {
-		setIcon(icone);
+	GRAMA("/grama.png"), AGUA("/agua.png"), MACA("/maca.png"), PERSONAGEM("/personagem.png");
+	
+	private String caminho;
+	
+	Elementos(String caminho){
+		this.caminho = caminho;
 	}
 
-	private void setIcon(ImageIcon icone) {
-		this.icone = icone;
+	public String getCaminhoImagem() {
+		return caminho;
 	}
 
-	public ImageIcon getIcon() {
-		return icone;
-	}
 }
