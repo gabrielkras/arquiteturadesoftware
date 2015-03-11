@@ -5,7 +5,9 @@ import java.awt.GridLayout;
 import java.io.IOException;
 
 import javax.imageio.ImageIO;
-import javax.swing.ImageIcon;
+import javax.swing.*;
+import javax.swing.ImageIcon.*;
+import javax.swing.Icon;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 
@@ -18,12 +20,11 @@ public class Tabuleiro {
 	public Tabuleiro(Mapa mapa) {
 		this.mapa = mapa;
 		this.elementos = mapa.getMapa();
+		telaJogo = new JFrame();
 
 	}
 
 	public void gerarTela() throws IOException {
-		telaJogo = new JFrame(); // Criar o frame
-
 		telaJogo.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
 		telaJogo.setLayout(new GridLayout(mapa.getAltura(), mapa.getLargura()));
@@ -49,5 +50,10 @@ public class Tabuleiro {
 		telaJogo.pack();
 		telaJogo.setLocationRelativeTo(null);
 		telaJogo.setVisible(true);
+	}
+	
+	public void alterarElemento(int altura, int largura, Elementos novoElemento) throws IOException{
+		((JLabel) telaJogo.getContentPane().getComponent((altura * mapa.getLargura()) + largura)).setIcon(new ImageIcon(ImageIO.read
+				(Tabuleiro.class.getResourceAsStream(novoElemento.getCaminhoImagem()))));
 	}
 }

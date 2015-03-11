@@ -1,6 +1,7 @@
 package jogo;
 
 import java.io.IOException;
+import java.util.Scanner;
 
 import tabuleiro.*;
 
@@ -21,6 +22,9 @@ public class ExecucaoJogo {
 		
 		Tabuleiro tab = new Tabuleiro(fase1);
 		tab.gerarTela();
+		Scanner s = new Scanner(System.in);
+		s.nextLine();
+		tab.alterarElemento(0, 0, Elementos.MACA);
 	}
 
 }
