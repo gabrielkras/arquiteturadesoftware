@@ -3,7 +3,11 @@ package tabuleiro;
 import javax.swing.ImageIcon;
 
 public enum Elementos {
-	GRAMA("/grama.png"), AGUA("/agua.png"), MACA("/maca.png"), PERSONAGEM("/personagem.png");
+	// ENUMERADORES -> com a passagem de parametros para o contrutor)
+	GRAMA("/grama.png"), 
+	AGUA("/agua.png"), 
+	MACA("/maca.png"), 
+	PERSONAGEM("/personagem.png");
 	
 	private String caminho;
 	

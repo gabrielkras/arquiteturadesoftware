@@ -1,6 +1,7 @@
 package jogo;
 
 import java.io.IOException;
+import static tabuleiro.Elementos.*;
 import java.util.Scanner;
 
 import tabuleiro.*;
@@ -10,11 +11,11 @@ public class ExecucaoJogo {
 	
 	public static void main(String args[]) throws IOException{
 		Elementos[][] e = {
-				{Elementos.GRAMA,Elementos.GRAMA,Elementos.GRAMA,Elementos.GRAMA,Elementos.GRAMA},
-				{Elementos.AGUA,Elementos.AGUA,Elementos.AGUA,Elementos.PERSONAGEM,Elementos.AGUA},
-				{Elementos.GRAMA,Elementos.GRAMA,Elementos.GRAMA,Elementos.GRAMA,Elementos.GRAMA},
-				{Elementos.GRAMA,Elementos.GRAMA,Elementos.GRAMA,Elementos.GRAMA,Elementos.GRAMA},
-				{Elementos.GRAMA,Elementos.GRAMA,Elementos.GRAMA,Elementos.MACA,Elementos.GRAMA},
+				{GRAMA,GRAMA,GRAMA,GRAMA ,GRAMA},
+				{AGUA ,AGUA ,AGUA ,PERSONAGEM,AGUA},
+				{GRAMA,GRAMA,GRAMA,GRAMA ,GRAMA},
+				{GRAMA,GRAMA,GRAMA,GRAMA ,GRAMA},
+				{GRAMA,GRAMA,GRAMA,MACA,GRAMA},
 		};
 		
 		Mapa fase1 = new Mapa(5,5);
@@ -24,7 +25,7 @@ public class ExecucaoJogo {
 		tab.gerarTela();
 		Scanner s = new Scanner(System.in);
 		s.nextLine();
-		tab.alterarElemento(0, 0, Elementos.MACA);
+		tab.alterarElemento(3, 4, MACA);
 	}
 
 }

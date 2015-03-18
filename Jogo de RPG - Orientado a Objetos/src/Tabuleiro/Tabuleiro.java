@@ -52,8 +52,9 @@ public class Tabuleiro {
 		telaJogo.setVisible(true);
 	}
 	
+	// Efetua a Troca da Imagem, Conforme a posição passada.
 	public void alterarElemento(int altura, int largura, Elementos novoElemento) throws IOException{
-		((JLabel) telaJogo.getContentPane().getComponent((altura * mapa.getLargura()) + largura)).setIcon(new ImageIcon(ImageIO.read
+		((JLabel) telaJogo.getContentPane().getComponent((altura * mapa.getLargura()) + largura )).setIcon(new ImageIcon(ImageIO.read
 				(Tabuleiro.class.getResourceAsStream(novoElemento.getCaminhoImagem()))));
 	}
 }
